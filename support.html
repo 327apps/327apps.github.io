@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Support - 327Apps</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      color: #2d3748;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      color: #2d3748;
+      padding: 1.25rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #2d3748;
+      letter-spacing: -0.5px;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, #3182ce, #38a169);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+    }
+    
+    .logo::first-letter {
+      font-size: 1.9rem;
+      font-weight: 900;
+    }
+    
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #3182ce, #38a169);
+      transform: scaleX(0.7);
+      transform-origin: left;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    
+    .logo:hover::after {
+      transform: scaleX(1);
+      background: linear-gradient(90deg, #38a169, #3182ce);
+    }
+    
+    .logo:hover {
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #4a5568;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      padding: 0.5rem 0;
+      position: relative;
+    }
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #4a5568;
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+
+    main {
+      margin-top: 4rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      color: #1a202c;
+      letter-spacing: -1px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 3rem 0 1.5rem 0;
+      color: #2d3748;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: #4a5568;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      margin: 1rem 0 1.5rem 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .support-hero {
+      text-align: center;
+      background: linear-gradient(135deg, #f8fafc, #edf2f7);
+      padding: 3rem 2rem;
+      border-radius: 16px;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .support-hero:before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99,179,237,0.1) 0%, rgba(99,179,237,0) 70%);
+      z-index: 0;
+    }
+    
+    .support-hero:after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(72,187,120,0.1) 0%, rgba(72,187,120,0) 70%);
+      z-index: 0;
+    }
+    
+    .support-hero h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1a202c;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .support-hero p {
+      font-size: 1.2rem;
+      color: #4a5568;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.03), 0 6px 12px rgba(0,0,0,0.02);
+      max-width: 600px;
+      margin: 0 auto;
+      border: 1px solid #f0f4f8;
+      text-align: center;
+    }
+    
+    .contact-card h3 {
+      color: #2d3748;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+    
+    .email-link {
+      display: inline-block;
+      background: linear-gradient(135deg, #4299e1, #48bb78);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      margin: 1rem 0;
+    }
+    
+    .email-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(66, 153, 225, 0.3);
+    }
+
+    .support-info {
+      background-color: #f7fafc;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      border-left: 4px solid #48bb78;
+    }
+
+    .support-info h3 {
+      color: #2d3748;
+      margin-top: 0;
+    }
+
+    .response-time {
+      background-color: #f0f8ff;
+      border: 1px solid #bee3f8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-left: 4px solid #3182ce;
+      text-align: center;
+    }
+
+    .response-time h3 {
+      color: #2c5282;
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: #f8fafc;
+      color: #4a5568;
+      text-align: center;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    footer p {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 2rem 1rem;
+      }
+      
+      .support-hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">327Apps</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy-policy.html">Privacy</a></li>
+        <li><a href="terms-of-use.html">Terms</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Support</h1>
+      
+      <div class="support-hero">
+        <h2>We're Here to Help</h2>
+        <p>Get the support you need for all 327Apps products and services</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Contact Support</h3>
+        <p>For technical support, questions, or assistance with our applications, please reach out to us:</p>
+        <a href="mailto:mail@327apps.com" class="email-link">mail@327apps.com</a>
+        <p style="margin-top: 1.5rem; color: #4a5568;">
+          <strong>327Apps</strong><br>
+          1111B S Governors Ave STE 26920<br>
+          Dover, DE 19904<br>
+          Phone: (302) 244-5717
+        </p>
+      </div>
+
+      <div class="response-time">
+        <h3>Response Time</h3>
+        <p>We typically respond to support requests within 24-48 hours during business days. For urgent issues, please mark your email as "URGENT" in the subject line.</p>
+      </div>
+
+      <div class="support-info">
+        <h3>What We Can Help With</h3>
+        <ul>
+          <li>Technical issues with our applications</li>
+          <li>Account and billing questions</li>
+          <li>Feature requests and feedback</li>
+          <li>Privacy and data protection inquiries</li>
+          <li>General questions about our services</li>
+          <li>Bug reports and troubleshooting</li>
+        </ul>
+      </div>
+
+      <div class="support-info">
+        <h3>Before Contacting Support</h3>
+        <p>To help us assist you more effectively, please include the following information in your support request:</p>
+        <ul>
+          <li>Your device type and operating system</li>
+          <li>Application version (if applicable)</li>
+          <li>Detailed description of the issue</li>
+          <li>Steps you've already tried to resolve the problem</li>
+          <li>Screenshots or error messages (if applicable)</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div class="logo" style="margin-bottom: 1.5rem; font-size: 2rem;">327Apps</div>
+        <p style="max-width: 600px; margin-bottom: 2rem;">Delivering innovative software solutions for businesses of all sizes.</p>
+        <div style="width: 50px; height: 3px; background: linear-gradient(90deg, #4299e1, #48bb78); margin-bottom: 2rem; border-radius: 3px;"></div>
+        <div style="margin-bottom: 1rem;">
+          <a href="support.html" style="color: #4a5568; text-decoration: none; margin: 0 1rem;">Support</a>
+          <a href="privacy-policy.html" style="color: #4a5568; text-decoration: none; margin: 0 1rem;">Privacy Policy</a>
+          <a href="terms-of-use.html" style="color: #4a5568; text-decoration: none; margin: 0 1rem;">Terms of Use</a>
+        </div>
+      </div>
+      <p>&copy; 2025 327Apps. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
