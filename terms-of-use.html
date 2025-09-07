@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Terms of Use - 327Apps</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      color: #2d3748;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      color: #2d3748;
+      padding: 1.25rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #2d3748;
+      letter-spacing: -0.5px;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, #3182ce, #38a169);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+    }
+    
+    .logo::first-letter {
+      font-size: 1.9rem;
+      font-weight: 900;
+    }
+    
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #3182ce, #38a169);
+      transform: scaleX(0.7);
+      transform-origin: left;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    
+    .logo:hover::after {
+      transform: scaleX(1);
+      background: linear-gradient(90deg, #38a169, #3182ce);
+    }
+    
+    .logo:hover {
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #4a5568;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      padding: 0.5rem 0;
+      position: relative;
+    }
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #4a5568;
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+
+    main {
+      margin-top: 4rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      color: #1a202c;
+      letter-spacing: -1px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 3rem 0 1.5rem 0;
+      color: #2d3748;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: #4a5568;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      margin: 1rem 0 1.5rem 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .last-updated {
+      text-align: center;
+      color: #718096;
+      font-style: italic;
+      margin-bottom: 3rem;
+      padding: 1rem;
+      background-color: #f7fafc;
+      border-radius: 8px;
+      border-left: 4px solid #4299e1;
+    }
+
+    .contact-info {
+      background-color: #f7fafc;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 3rem;
+      border-left: 4px solid #48bb78;
+    }
+
+    .contact-info h3 {
+      color: #2d3748;
+      margin-top: 0;
+    }
+
+    .contact-info a {
+      color: #4299e1;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-info a:hover {
+      color: #2b6cb0;
+    }
+
+    .important-notice {
+      background-color: #fff5f5;
+      border: 1px solid #fed7d7;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-left: 4px solid #e53e3e;
+    }
+
+    .important-notice h3 {
+      color: #c53030;
+      margin-top: 0;
+    }
+
+    .section-number {
+      font-weight: 700;
+      color: #2d3748;
+    }
+
+    footer {
+      background-color: #f8fafc;
+      color: #4a5568;
+      text-align: center;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    footer p {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">327Apps</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy</a></li>
+        <li><a href="terms-of-use.html">Terms</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Terms of Use</h1>
+      
+      <div class="last-updated">
+        <strong>Last Updated:</strong> January 2025
+      </div>
+
+      <h2><span class="section-number">1.</span> Terms</h2>
+      <p>
+        By accessing applications made by 327Apps you are agreeing to be bound by 
+        these terms of service, all applicable laws and regulations, and agree that 
+        you are responsible for compliance with any applicable local laws. If you do 
+        not agree with any of these terms, you are prohibited from using or accessing 
+        this site. The materials contained in this website are protected by applicable 
+        copyright and trademark law.
+      </p>
+
+      <h2><span class="section-number">2.</span> Use License</h2>
+      <p>
+        1. Permission is granted to temporarily download one copy of the materials 
+        (information or software) on 327Apps apps for personal, non-commercial 
+        transitory viewing only. This is the grant of a license, not a transfer of 
+        title, and under this license you may not:
+      </p>
+      <ul>
+        <li>modify or copy the materials;</li>
+        <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+        <li>attempt to decompile or reverse engineer any software contained on 327Apps' website;</li>
+        <li>remove any copyright or other proprietary notations from the materials; or</li>
+        <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+      </ul>
+      <p>
+        2. This license shall automatically terminate if you violate any of these 
+        restrictions and may be terminated by 327Apps at any time. Upon terminating 
+        your viewing of these materials or upon the termination of this license, you 
+        must destroy any downloaded materials in your possession whether in electronic 
+        or printed format.
+      </p>
+
+      <h2><span class="section-number">3.</span> Disclaimer</h2>
+      <p>
+        1. The materials on 327Apps' website are provided on an 'as is' basis. 
+        327Apps makes no warranties, expressed or implied, and hereby disclaims and 
+        negates all other warranties including, without limitation, implied warranties 
+        or conditions of merchantability, fitness for a particular purpose, or 
+        non-infringement of intellectual property or other violation of rights.
+      </p>
+      <p>
+        2. Further, 327Apps does not warrant or make any representations concerning 
+        the accuracy, likely results, or reliability of the use of the materials on 
+        its website or otherwise relating to such materials or on any sites linked to 
+        this site.
+      </p>
+
+      <h2><span class="section-number">4.</span> Limitations</h2>
+      <p>
+        In no event shall 327Apps or its suppliers be liable for any damages 
+        (including, without limitation, damages for loss of data or profit, or due to 
+        business interruption) arising out of the use or inability to use the materials 
+        on 327Apps apps, even if 327Apps apps or a 327Apps authorized representative 
+        has been notified orally or in writing of the possibility of such damage. 
+        Because some jurisdictions do not allow limitations on implied warranties, or 
+        limitations of liability for consequential or incidental damages, these 
+        limitations may not apply to you.
+      </p>
+
+      <h2><span class="section-number">5.</span> Accuracy of materials</h2>
+      <p>
+        The materials appearing on 327Apps apps could include technical, typographical, 
+        or photographic errors. 327Apps apps does not warrant that any of the materials 
+        on its website are accurate, complete or current. 327Apps may make changes to 
+        the materials contained on its website at any time without notice. However 
+        327Apps does not make any commitment to update the materials.
+      </p>
+
+      <h2><span class="section-number">6.</span> Links</h2>
+      <p>
+        327Apps has not reviewed all of the sites linked to its apps and is not 
+        responsible for the contents of any such linked site. The inclusion of any 
+        link does not imply endorsement by 327Apps of the site. Use of any such linked 
+        website is at the user's own risk.
+      </p>
+
+      <h2><span class="section-number">7.</span> Modifications</h2>
+      <p>
+        327Apps may revise these terms of service for its website at any time without 
+        notice. By using this website you are agreeing to be bound by the then current 
+        version of these terms of service.
+      </p>
+
+      <h2><span class="section-number">8.</span> Governing Law</h2>
+      <p>
+        These terms and conditions are governed by and construed in accordance with 
+        the laws of the United States and you irrevocably submit to the exclusive 
+        jurisdiction of the courts in that location.
+      </p>
+
+      <h2><span class="section-number">9.</span> Refund Policy</h2>
+      <p>
+        Apps are offering non-tangible irrevocable goods we do not issue refunds once 
+        the order is accomplished and the product is sent. As a customer you are 
+        responsible for understanding this upon purchasing any item at our site.
+      </p>
+
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>
+          If you have any questions about these Terms of Use, please contact us:
+        </p>
+        <p>
+          <strong>327Apps</strong><br>
+          1111B S Governors Ave STE 26920<br>
+          Dover, DE 19904<br>
+          Phone: (302) 244-5717<br>
+          Email: <a href="mailto:mail@327apps.com">mail@327apps.com</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div class="logo" style="margin-bottom: 1.5rem; font-size: 2rem;">327Apps</div>
+        <p style="max-width: 600px; margin-bottom: 2rem;">Delivering innovative software solutions for businesses of all sizes.</p>
+        <div style="width: 50px; height: 3px; background: linear-gradient(90deg, #4299e1, #48bb78); margin-bottom: 2rem; border-radius: 3px;"></div>
+        <div style="margin-bottom: 1rem;">
+          <a href="privacy-policy.html" style="color: #4a5568; text-decoration: none; margin: 0 1rem;">Privacy Policy</a>
+          <a href="terms-of-use.html" style="color: #4a5568; text-decoration: none; margin: 0 1rem;">Terms of Use</a>
+        </div>
+      </div>
+      <p>&copy; 2025 327Apps. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
